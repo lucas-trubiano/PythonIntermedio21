@@ -1,0 +1,11 @@
+1) Primer paso crear una carpeta repos en el home/user
+
+#################### Configurar Git ####################
+2) Instalar git con: sudo apt-get install git-all
+3) Clonar un repositorio: git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+
+#################### Instalar tmux #####################
+4) Instalar tmux: sudo apt-get install tmux
+
+############### Instalar pip para python ###############
+5) Instalar pip para python3: sudo apt-get install python3-pip

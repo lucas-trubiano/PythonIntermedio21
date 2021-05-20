@@ -147,7 +147,18 @@ class TelegramBot():
         _thread.start_new_thread( self.bucle,() )
 
     def bucle(self):
-        self.bot.polling()
+        # Always get updates.
+        # :param interval: Delay between two update retrivals
+        # :param none_stop: Do not stop polling when an ApiException occurs.
+        # :param timeout: Request connection timeout
+        # :param long_polling_timeout: Timeout in seconds for long polling (see API docs)
+        
+        # Upon calling this function, TeleBot starts polling the Telegram servers for new messages.
+        # - none_stop: True/False (default False) - Don't stop polling when receiving an error from the Telegram servers
+        # - interval: True/False (default False) - The interval between polling requests
+        #           Note: Editing this parameter harms the bot's response time
+        # - timeout: integer (default 20) - Timeout in seconds for long polling.
+        self.bot.polling(none_stop=False, interval=0, timeout=20)
     
     def fin(self):
         self.flagOpc = False
