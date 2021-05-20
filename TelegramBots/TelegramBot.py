@@ -173,6 +173,12 @@ class TelegramBot():
     
     def exit(self):
         self.bot.stop_bot()
+
+    # def restart(self):
+    #     self.bot.
+
+    def close(self):
+        return self.bot.stop_polling()
     
 
 print("INICIO")
@@ -198,6 +204,7 @@ while True:
         teleg.printMessage("Viendo Productos")
     elif opc==4:
         #teleg.printMessage("Adios")
+        print(teleg.close())
         teleg.fin()
         break
     else:
