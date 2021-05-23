@@ -144,7 +144,8 @@ class TelegramBot():
         pass
 
     def iniciarBucle(self):
-        _thread.start_new_thread( self.bucle,() )
+        self.bucle()
+        #_thread.start_new_thread( self.bucle,() )
 
     def bucle(self):
         # Always get updates.
@@ -158,7 +159,18 @@ class TelegramBot():
         # - interval: True/False (default False) - The interval between polling requests
         #           Note: Editing this parameter harms the bot's response time
         # - timeout: integer (default 20) - Timeout in seconds for long polling.
-        self.bot.polling(none_stop=False, interval=0, timeout=20)
+        try:
+            self.bot.polling(none_stop=True, interval=0, timeout=60)
+            #bot.polling(none_stop=True, timeout=60) #constantly get messages from Telegram
+        except:
+            print("Terminó un ciclo")
+            # traceback_error_string=traceback.format_exc()
+            # with open("Error.Log", "a") as myfile:
+            #     myfile.write("\r\n\r\n" + time.strftime("%c")+"\r\n<<ERROR polling>>\r\n"+ traceback_error_string + "\r\n<<ERROR polling>>")
+            self.bot.stop_polling()
+            time.sleep(10)
+            self.bucle()
+        # self.bot.polling(none_stop=False, interval=0, timeout=20)
     
     def fin(self):
         self.flagOpc = False
@@ -177,8 +189,8 @@ class TelegramBot():
     # def restart(self):
     #     self.bot.
 
-    def close(self):
-        return self.bot.stop_polling()
+    # def close(self):
+    #     return self.bot.stop_polling()
     
 
 print("INICIO")
@@ -204,7 +216,7 @@ while True:
         teleg.printMessage("Viendo Productos")
     elif opc==4:
         #teleg.printMessage("Adios")
-        print(teleg.close())
+        print("Termino un bucle")
         teleg.fin()
         break
     else:
