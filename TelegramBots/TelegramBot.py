@@ -144,8 +144,8 @@ class TelegramBot():
         pass
 
     def iniciarBucle(self):
-        self.bucle()
-        #_thread.start_new_thread( self.bucle,() )
+        #self.bucle()
+        _thread.start_new_thread( self.bucle,() )
 
     def bucle(self):
         # Always get updates.
