@@ -168,7 +168,7 @@ class TelegramBot():
             # with open("Error.Log", "a") as myfile:
             #     myfile.write("\r\n\r\n" + time.strftime("%c")+"\r\n<<ERROR polling>>\r\n"+ traceback_error_string + "\r\n<<ERROR polling>>")
             self.bot.stop_polling()
-            time.sleep(10)
+            time.sleep(2)
             self.bucle()
         # self.bot.polling(none_stop=False, interval=0, timeout=20)
     
