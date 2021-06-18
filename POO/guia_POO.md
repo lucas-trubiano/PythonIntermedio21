@@ -1,5 +1,5 @@
 # Programación Orientada a Objetos (en Python)
-A continuación vamos a presentar una guía sobre Programación Orientada a Objetos con Python 3.
+A continuación vamos a presentar una guía sobre Programación Orientada a Objetos con Python 3. El tutorial esta disponible el Youtube: [POO en Python](google.com)
 # Introducción
 
 ## 1) Pilares de la POO
