@@ -1,5 +1,5 @@
-# Curso de Python Nivel Intermedio - 2021
-Códigos del Curso de Python Nivel Intermedio de Casa del Futuro Godoy Cruz 2021
+# Curso de Python Nivel Intermedio - 2022
+Códigos del Curso de Python Nivel Intermedio de Python 2022
 
 # Temas:
 ## 1. Manejo de Archivos
